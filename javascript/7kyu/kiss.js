@@ -21,3 +21,25 @@ return "Good work Joe!"
 Note: Random test are random and nonsensical. Here is a silly example of a random test:
 
 "jump always mostly is touchy dancing choice is pineapples mostly"*/
+
+// my solution
+
+ // determine whether Joe's sentence is simple or complex
+function isKiss(sentence) {
+  // split the sentence into individual words
+  const words = sentence.split(" ");
+  
+  // count how many words the sentence has
+  const wordCount = words.length;
+
+  // check each word's length
+  for (let word of words) {
+    // if any word is longer than the total number of words, it's complex
+    if (word.length > wordCount) {
+      return "Keep It Simple Stupid";
+    }
+  }
+
+  // if we never found a too-long word, it's simple
+  return "Good work Joe!";
+}
